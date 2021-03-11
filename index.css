@@ -1,0 +1,68 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background: #eee;
+  line-height: 1.6;
+}
+
+.slider {
+  height: 100vh;
+  display: inline-flex;
+  overflow: hidden;
+  transform: translateX(0);
+  transition: 0.3s ease-out;
+  cursor: grab;
+}
+
+.slide {
+  max-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  user-select: none;
+}
+
+.slide > * + * {
+  margin: 2em 0;
+}
+
+.slide__img {
+  max-width: 30rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.slide__title {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.slide__price {
+  font-size: 1.3rem;
+}
+
+.btn {
+  background: rgb(12, 68, 119);
+  color: white;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+}
+
+.grabbing {
+  cursor: grabbing;
+}
+
+.grabbing .slide__img {
+  transform: scale(0.9);
+}
